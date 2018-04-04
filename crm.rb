@@ -1,4 +1,8 @@
+require_relative "contact"
+
 class CRM
+
+  # Contact.create(frist_name, last_name, email, note)
 
   def initialize
 
@@ -51,3 +55,20 @@ class CRM
 
 
 end
+
+
+jeremy = Contact.create(
+  first_name: "Jeremy",
+  last_name:  "Soule",
+  email:      "jsoule@hotmail.com",
+  note:       "Composer for Elder Scrolls series"
+)
+
+andrew = Contact.create(
+  first_name: "Andrew",
+  last_name:  "Popaia",
+  email:      "andrewp@hotmail.com",
+  note:       "Guy I made up"
+)
+
+puts jeremy.inspect, andrew.inspect
